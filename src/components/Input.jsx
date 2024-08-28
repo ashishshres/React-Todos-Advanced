@@ -7,6 +7,11 @@ const Input = () => {
     const [newTodo, setNewTodo] = useState("");
     const handleAddTodo = () => {
         setTodos([...todos, { id: nanoid(), todo: newTodo, marked: false }]);
+        setNewTodo("");
+    };
+
+    const handleChange = (e) => {
+        setNewTodo(e.target.value);
     };
 
     useEffect(() => {
@@ -22,7 +27,7 @@ const Input = () => {
                 className="bg-zinc-700 outline-none w-full py-2 px-3"
                 placeholder="Write your todo..."
                 value={newTodo}
-                onChange={(e) => setNewTodo(e.target.value)}
+                onChange={handleChange}
             />
             <button
                 onClick={handleAddTodo}
