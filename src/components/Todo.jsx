@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./Input";
-import Routing from "../utils/routing";
+import Routing from "../utils/Routing";
 import Nav from "./Nav";
 
 const Todo = () => {
