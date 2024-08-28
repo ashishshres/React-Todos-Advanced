@@ -11,7 +11,7 @@ const Checked = () => {
     };
 
     return (
-        <ul className="mt-3 flex flex-col gap-1">
+        <ul className="mt-3 flex flex-col gap-2">
             {checkedTodos.length > 0 ? (
                 checkedTodos.map((todo) => {
                     if (todo.marked == true) {
